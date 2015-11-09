@@ -3,7 +3,7 @@ require 'csv'
 
 begin
 
-    con = PG.connect :host => 'ec2-54-163-228-188.compute-1.amazonaws.com' :dbname => 'd62e809t1n9frg', :user => 'kyokfgvbcubmle', 
+    con = PG.connect :host => 'ec2-54-163-228-188.compute-1.amazonaws.com', :dbname => 'd62e809t1n9frg', :user => 'kyokfgvbcubmle', 
         :password => 'li_5MHueue-Z_m85bRmt_EOj3E'
 
     puts "Connected" 
