@@ -3,8 +3,8 @@ require 'csv'
 
 begin
 
-    con = PG.connect :dbname => 'd1j47m5iun7ce0', :user => 'euijexaffkhynz', 
-        :password => '3EPmf4_zhI6Jk-7goS-Rr_lq_F'
+    con = PG.connect :dbname => 'd62e809t1n9frg', :user => 'kyokfgvbcubmle', 
+        :password => 'li_5MHueue-Z_m85bRmt_EOj3E'
 
     puts "Connected" 
 
