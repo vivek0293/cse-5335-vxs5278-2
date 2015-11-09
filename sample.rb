@@ -42,10 +42,10 @@ begin
         
     end
 
-    v = con.exec('SELECT AGE from health')
+    '''v = con.exec('SELECT AGE from health')
     v.each do |row|
         puts "%s" % [ row['AGE'] ]
-    end
+    end'''
     puts "DONE"
 rescue PG::Error => e
 
