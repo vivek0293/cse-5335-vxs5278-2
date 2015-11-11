@@ -14,7 +14,10 @@ begin
 	#mongoimport --db heroku_mhz4f7bj --collection sample --type csv --headerline --file 6339_Dataset_1.csv
 	#mongoimport --db heroku_mhz4f7bj --type csv --headerline --file 6339_Dataset_1.csvmongoimport --host=127.0.0.1 -d database_name -c collection_name --type csv --file csv_location --headerline
 	#mongoimport --host=ds031912.mongolab.com:31912 -d heroku_mhz4f7bj --type csv --file 6339_Dataset_1.csv --headerline
-	data = CSV.read('6339_Dataset_1.csv')
-	CSV.parse(data).to_json
-	puts "file imported"
+	#data = CSV.read('6339_Dataset_1.csv')
+	#CSV.parse(data).to_json
+
+	extracted_data   = CSV.table('6339_Dataset_1.csv')
+	transformed_data = extracted_data.map { |row| row.to_hash }
+	puts "file transformed"
 end
