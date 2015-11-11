@@ -19,14 +19,15 @@ begin
 
 	extracted_data   = CSV.table('6339_Dataset_1.csv')
 	transformed_data = extracted_data.map { |row| row.to_hash }
-	puts transformed_data
+	#puts transformed_data
 	puts "file transformed"
 	#puts transformed_data
 	#health.drop
-	data = client[:da, :capped => true, :size => 2048]
+	data = client[:data, :capped => false, :size => 2048]
 	data.create
 	puts "Collection Created"
 	transformed_data.each do |data_row|
+		#puts data_row
 		data.insert_one(data_row)
 	end
 	puts"DONEexit"
