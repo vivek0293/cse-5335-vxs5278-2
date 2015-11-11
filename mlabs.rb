@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'mongo'
 require 'csv'
-require 'JSON'
+require 'json'
 begin
 	#client = Mongo::Client.new([ 'localhost:27017' ], :database => 'music')
 	#mongo_client = Mongo::Client.new(['localhost'], 27017)
