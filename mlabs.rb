@@ -8,4 +8,8 @@ begin
 	client = Mongo::Client.new([ 'ds031912.mongolab.com:31912' ], :database => 'heroku_mhz4f7bj', :user => 'heroku_mhz4f7bj')
 	puts "Connected"
 
+	coll = db.collection("testCollection")
+	puts "Collection created"
+	mongoimport --db heroku_mhz4f7bj --collection sample --type csv --headerline --file 6339_Dataset_1.csv
+	puts "file imported"
 end
