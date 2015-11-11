@@ -26,7 +26,7 @@ begin
 	health.create
 	puts "Collection Created"
 	transformed_data.each do |data_row|
-		coll.insert(data_row)
+		health.insert(data_row)
 	end
 	puts"DONEexit"
 end
