@@ -21,7 +21,7 @@ begin
 	transformed_data = extracted_data.map { |row| row.to_hash }
 	puts "file transformed"
 	#puts transformed_data
-
+	health.drop
 	health = client[:health, :capped => true, :size => 1024]
 	health.create
 	puts "Collection Created"
