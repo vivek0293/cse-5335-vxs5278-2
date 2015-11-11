@@ -22,7 +22,7 @@ begin
 	puts "file transformed"
 	#puts transformed_data
 	#health.drop
-	data = client[:dat, :capped => true, :size => 1024]
+	data = client[:da, :capped => true]
 	data.create
 	puts "Collection Created"
 	transformed_data.each do |data_row|
