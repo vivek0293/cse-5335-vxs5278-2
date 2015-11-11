@@ -11,6 +11,7 @@ begin
 	#coll = db.collection("testCollection")
 	#puts "Collection created"
 	#mongoimport --db heroku_mhz4f7bj --collection sample --type csv --headerline --file 6339_Dataset_1.csv
-	mongoimport --db heroku_mhz4f7bj --type csv --headerline --file 6339_Dataset_1.csv
+	#mongoimport --db heroku_mhz4f7bj --type csv --headerline --file 6339_Dataset_1.csvmongoimport --host=127.0.0.1 -d database_name -c collection_name --type csv --file csv_location --headerline
+	mongoimport --host=ds031912.mongolab.com:31912 -heroku_mhz4f7bj --type csv --file 6339_Dataset_1.csv --headerline
 	puts "file imported"
 end
