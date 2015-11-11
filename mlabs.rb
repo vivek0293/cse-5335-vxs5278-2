@@ -35,7 +35,7 @@ begin
 		puts document.to_s
 		puts "Query"
 	end
-	client[:health].find(:age => 1).each do |document|
+	client[:health].find(:age => 3).each do |document|
 		puts document.to_s
 	end
 	puts"DONE"
