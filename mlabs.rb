@@ -23,12 +23,20 @@ begin
 	puts "file transformed"
 	#puts transformed_data
 	#health.drop
-	data = client[:data, :capped => false, :size => 2048]
+	data = client[:health, :capped => false, :size => 2048]
 	data.create
 	puts "Collection Created"
 	transformed_data.each do |data_row|
 		#puts data_row
 		data.insert_one(data_row)
 	end
-	puts"DONEexit"
+	
+	client[:health].find(:id => 3).each do |document|
+		puts document.to_s
+		puts "Query"
+	end
+	client[:health].find(:age => 1).each do |document|
+		puts document.to_s
+	end
+	puts"DONE"
 end
