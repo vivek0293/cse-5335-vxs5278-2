@@ -22,7 +22,9 @@ begin
 	puts "file transformed"
 	#puts transformed_data
 
-	coll = client.createCollection("testCollection")
+	health = client[:health, :capped => true, :size => 1024]
+	health.create
+	puts "Collection Created"
 	transformed_data.each do |data_row|
 		coll.insert(data_row)
 	end
