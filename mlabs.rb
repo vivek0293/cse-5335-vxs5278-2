@@ -26,7 +26,7 @@ begin
 	data.create
 	puts "Collection Created"
 	transformed_data.each do |data_row|
-		data.insert(data_row)
+		data.insert_one(data_row)
 	end
 	puts"DONEexit"
 end
