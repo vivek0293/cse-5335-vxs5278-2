@@ -22,7 +22,7 @@ begin
 	puts "file transformed"
 	#puts transformed_data
 
-	coll = client.collection("testCollection")
+	coll = client.createcollection("testCollection")
 	transformed_data.each do |data_row|
 		coll.insert(data_row)
 	end
