@@ -20,5 +20,11 @@ begin
 	extracted_data   = CSV.table('6339_Dataset_1.csv')
 	transformed_data = extracted_data.map { |row| row.to_hash }
 	puts "file transformed"
-	puts transformed_data
+	#puts transformed_data
+
+	coll = db.collection("testCollection")
+	transformed_data.each do |data_row|
+		coll.insert(data_row)
+	end
+	puts"DONE"
 end
