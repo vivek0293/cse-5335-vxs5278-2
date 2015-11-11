@@ -19,6 +19,7 @@ begin
 
 	extracted_data   = CSV.table('6339_Dataset_1.csv')
 	transformed_data = extracted_data.map { |row| row.to_hash }
+	puts transformed_data
 	puts "file transformed"
 	#puts transformed_data
 	#health.drop
