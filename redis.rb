@@ -24,13 +24,13 @@ begin
 	end
 	puts "Enter the ID:"
 	id = gets
-
+	puts"QUERY 1"
 	puts redis.hgetall(id.to_i)
 	redis.del("foo")
 	value = redis.keys('*')
-	#puts value
+	puts "QUERY 2"
 	value.each do |data|
-		puts id
+		#puts id
 		val = redis.hgetall(data)
 		#puts val
 		
