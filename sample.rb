@@ -39,13 +39,7 @@ begin
     data = CSV.foreach('6339_Dataset_1.csv') 
     data.each do |data_row|
         values = con.exec('INSERT INTO health(AGE,SEX,RACE,DAY_OF_ADMISSION,DISCHARGE_STATUS,STAY_INDICATOR,DRG_CODE,LENGTH_OF_STAY,DRG_PRICE,TOTAL_CHARGES,COVERED_CHARGES,POA_DIAGNOSIS_INDICATOR_1,POA_DIAGNOSIS_INDICATOR_2,DIAGNOSIS_CODE_1,DIAGNOSIS_CODE_2,PROCEDURE_CODE_1,PROCEDURE_CODE_2,DISCHARGE_DESTINATION,SOURCE_OF_ADMISSION,TYPE_OF_ADMISSION,ADMITTING_DIAGNOSIS_CODE,ID)VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)',data_row)    
-        
     end
-
-    '''v = con.exec('SELECT AGE from health')
-    v.each do |row|
-        puts "%s" % [ row['AGE'] ]
-    end'''
     puts "DONE"
 rescue PG::Error => e
 
