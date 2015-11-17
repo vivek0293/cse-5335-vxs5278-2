@@ -13,8 +13,9 @@ begin
     v.each do |row|
         puts "%s %s %s %s %s %s %s" % [ row['age'], row['sex'], row['race'], row['length_of_stay'], row['stay_indicator'], row['total_charges'], row['id'] ]
     end
-
-    w = con.exec("SELECT AGE,SEX,RACE, LENGTH_OF_STAY, STAY_INDICATOR, TOTAL_CHARGES from health where AGE = '3'")
+    puts "Enter the AGE:"
+	id = gets
+    w = con.exec("SELECT AGE,SEX,RACE, LENGTH_OF_STAY, STAY_INDICATOR, TOTAL_CHARGES from health where AGE = '%d'" % [id])
     puts "QUERY 2"
     w.each do |row|
         puts "%s %s %s %s %s %s" % [ row['age'], row['sex'], row['race'], row['length_of_stay'], row['stay_indicator'], row['total_charges'] ]
