@@ -37,7 +37,7 @@
 	•	git init
 	•	git add README.md
 	•	git commit -m "first commit"
-	•	git remote add origin https://github.com/vivek0293/cse5335-vxs5278-2.git
+	•	git remote add origin https://github.com/vivek0293/cse-5335-vxs5278-2.git
 	•	git push -u origin master
 	
 	After pushing our project to Github, we are now deploying that in Heroku. Commands for deploying,
